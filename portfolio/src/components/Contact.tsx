@@ -3,17 +3,7 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin} from 'lucide-react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const [submitStatus, setSubmitStatus] = useState<
-    'idle' | 'success' | 'error'
-  >('idle')
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,54 +27,10 @@ export default function Contact() {
     },
   }
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
   }
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault()
-
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-
-    setTimeout(() => {
-      if (
-        formData.name &&
-        formData.email &&
-        formData.message
-      ) {
-        setSubmitStatus('success')
-
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        })
-
-        setTimeout(() => {
-          setSubmitStatus('idle')
-        }, 3000)
-      } else {
-        setSubmitStatus('error')
-
-        setTimeout(() => {
-          setSubmitStatus('idle')
-        }, 3000)
-      }
-
-      setIsSubmitting(false)
-    }, 1500)
-  }
-
+ 
   const contactInfo = [
     {
       icon: Mail,
