@@ -30,12 +30,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: npx gh-pages -d dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
