@@ -184,8 +184,8 @@ export default function Hero() {
           className="flex justify-center gap-6"
         >
           {[
-            { Icon: Github, label: 'GitHub', href: 'https://github.com' },
-            { Icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
+            { Icon: Github, label: 'GitHub', href: 'https://github.com/hegavasanthan44' },
+            { Icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/hega-vasanthan-s-08a21931b/' },
             { Icon: Mail, label: 'Email', href: 'mailto:hegavasanth@gmail.com' },
           ].map(({ Icon, label, href }) => (
             <motion.a
