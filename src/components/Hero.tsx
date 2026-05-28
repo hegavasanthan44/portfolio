@@ -42,29 +42,11 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative pt-20 px-4">
       {/* Floating particles */}
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-          animate={{
-            y: [0, -100, 0],
-            x: [0, Math.random() * 200 - 100, 0],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 4 + i,
-            repeat: Infinity,
-            delay: i * 0.5,
-          }}
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-        />
-      ))}
+        {/* Removed floating particles for a cleaner layout */}
+        {/* <motion.div>... (removed code) */} 
 
       <motion.div
-        className="max-w-5xl w-full z-10"
+          className="max-w-4xl w-full z-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -109,33 +91,7 @@ export default function Hero() {
         </motion.p>
 
         {/* Profile Image Placeholder */}
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-center mb-12"
-        >
-          <motion.div
-            className="relative w-48 h-48 md:w-56 md:h-56"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
-            {/* Glowing border */}
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 p-1"
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-            >
-              <div className="absolute inset-1 rounded-full bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-6xl">
-                👨‍💻
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+          {/* Removed avatar — focus on name, title, and CTAs */}
 
         {/* Buttons */}
         <motion.div
@@ -157,10 +113,15 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
+              const cacheBusted = `resume.pdf?v=${Date.now()}`
+              const href = new URL(cacheBusted, document.baseURI).href
               const link = document.createElement('a')
-              link.href = '#'
-              link.download = 'Hega_Vasanth_Resume.pdf'
+              link.href = href
+              link.download = 'Hegavasanthan_S_Resume.pdf'
+              link.style.display = 'none'
+              document.body.appendChild(link)
               link.click()
+              document.body.removeChild(link)
             }}
           >
             <Download size={20} className="inline mr-2" />
@@ -204,34 +165,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <ScrollLink to="about" smooth={true} duration={500}>
-          <motion.div
-            className="w-8 h-12 border-2 border-cyan-400 rounded-full flex justify-center cursor-pointer"
-            whileHover={{ scale: 1.1 }}
-          >
-            <motion.div
-              className="w-1 h-2 bg-cyan-400 rounded-full mt-2"
-              animate={{ y: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </motion.div>
-        </ScrollLink>
-      </motion.div>
-
-      {/* Scroll indicator text */}
-      <motion.p
-        className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-cyan-400 text-sm"
-        animate={{ opacity: [1, 0.5, 1] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        Scroll to explore
-      </motion.p>
+      {/* Removed scroll indicator and label for a cleaner hero section */}
     </section>
   )
 }

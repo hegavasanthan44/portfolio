@@ -29,29 +29,7 @@ export default function About() {
     { Icon: Zap, title: 'NLP & Automation', description: 'Natural language processing and process automation' },
   ]
 
-  const AnimatedCounter = ({ value, label }: { value: string; label: string }) => {
-    return (
-      <motion.div
-        className="text-center p-6 glass-effect-dark rounded-xl hover:glass-effect transition-smooth"
-        whileHover={{ scale: 1.05, y: -10 }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true, margin: '-100px' }}
-      >
-        <motion.div
-          className="text-4xl md:text-5xl font-bold gradient-text mb-2"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          {value}
-        </motion.div>
-        <p className="text-slate-400 text-sm md:text-base">{label}</p>
-      </motion.div>
-    )
-  }
+  // Removed unused AnimatedCounter to satisfy TypeScript noUnusedLocals
 
   return (
     <section className="py-20 px-4 md:px-8 relative">

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-/*const skillsData = [
+const skillsData = [
   { name: 'Python', level: 95, category: 'Languages' },
   { name: 'Java', level: 80, category: 'Languages' },
   { name: 'Deep Learning', level: 88, category: 'AI/ML' },
@@ -13,7 +13,7 @@ import { motion } from 'framer-motion'
   { name: 'ChromaDB', level: 78, category: 'Tools' },
   { name: 'Data Analysis', level: 80, category: 'Tools' },
   { name: 'Git & GitHub', level: 85, category: 'Tools' },
-]*/
+]
 
 const categories = ['Languages', 'AI/ML', 'Tools']
 
