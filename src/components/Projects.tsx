@@ -9,7 +9,7 @@ const projectsData = [
       'GenAI powered RAG chatbot for extracting and answering queries from drug related PDF documents using vector embeddings and semantic search with Gemini API.',
     tags: ['GenAI', 'RAG', 'ChromaDB', 'Gemini API'],
     category: 'AI/ML',
-    github: 'https://github.com',
+    github: 'https://github.com/hegavasanthan44/GenAI-Powered-Drug-RAG-Chatbot',
     image: '💊',
   },
   {
@@ -19,7 +19,7 @@ const projectsData = [
       'Contactless attendance system using Deep Learning with FaceNet model for face detection and identification with automatic data logging.',
     tags: ['Deep Learning', 'FaceNet', 'OpenCV', 'Python'],
     category: 'Computer Vision',
-    github: 'https://github.com',
+    github: 'https://github.com/hegavasanthan44/Face-Recognition-Attendance-system-',
     image: '👤',
   },
   {
@@ -29,7 +29,7 @@ const projectsData = [
       'Streamlit based ML application for housing decisions in Chennai using Multiple Linear Regression and financial analysis.',
     tags: ['Streamlit', 'Machine Learning', 'Regression'],
     category: 'AI/ML',
-    github: 'https://github.com',
+    github: 'https://github.com/hegavasanthan44/Smart-Rent-Analyzer',
     image: '🏠',
   },
 ]

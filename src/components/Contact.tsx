@@ -66,10 +66,10 @@ export default function Contact() {
             <div>
               <h3 className="text-lg font-semibold text-white">Email</h3>
               <a
-                href="mailto:hegavasanthan@gmail.com"
+                href="mailto:hegavasanth@gmail.com"
                 className="text-slate-400 hover:text-cyan-400 transition-smooth"
               >
-                hegavasanthan@gmail.com
+                hegavasanth@gmail.com
               </a>
             </div>
           </motion.div>
@@ -83,7 +83,7 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white">Phone</h3>
-              <p className="text-slate-400">+91 9940169839</p>
+              <p className="text-slate-400">+91 9962864731</p>
             </div>
           </motion.div>
 

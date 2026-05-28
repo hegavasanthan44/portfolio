@@ -5,7 +5,7 @@ import { Link as ScrollLink } from 'react-scroll'
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState('')
-  const fullText = 'Artificial Intelligence And Machine Learning Graduate '
+  const fullText = 'AI & ML Engineer  Deep Learning Enthusiast'
   const typewriterRef = useRef(0)
 
   useEffect(() => {
@@ -158,7 +158,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               const link = document.createElement('a')
-              link.href = '/Hegavasanthan S resume..pdf'
+              link.href = '#'
               link.download = 'Hega_Vasanth_Resume.pdf'
               link.click()
             }}
@@ -184,8 +184,8 @@ export default function Hero() {
           className="flex justify-center gap-6"
         >
           {[
-            { Icon: Github, label: 'GitHub', href: 'https://github.com/hegavasanthan44' },
-            { Icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/hega-vasanthan-s-08a21931b/' },
+            { Icon: Github, label: 'GitHub', href: 'https://github.com' },
+            { Icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
             { Icon: Mail, label: 'Email', href: 'mailto:hegavasanth@gmail.com' },
           ].map(({ Icon, label, href }) => (
             <motion.a
@@ -235,4 +235,3 @@ export default function Hero() {
     </section>
   )
 }
-

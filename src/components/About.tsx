@@ -22,7 +22,6 @@ export default function About() {
     },
   }
 
-  const stats: Array<{ value: string; label: string }> = []
 
   const interests = [
     { Icon: Brain, title: 'AI & Machine Learning', description: 'Building intelligent systems and predictive models' },
@@ -164,18 +163,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Stats */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          {stats.map((stat, index) => (
-            <AnimatedCounter key={index} value={stat.value} label={stat.label} />
-          ))}
-        </motion.div>
+        {/* Stats section commented out */}
 
         {/* Interests */}
         <motion.div
@@ -207,4 +195,3 @@ export default function About() {
     </section>
   )
 }
-

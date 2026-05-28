@@ -103,9 +103,12 @@ export default function Resume() {
               whileTap={{ scale: 0.95 }}
               onClick={() => {
                 const link = document.createElement('a')
-                link.href = '/Hegavasanthan S resume..pdf'
+                link.href = 'resume.pdf'
                 link.download = 'Hegavasanthan_S_Resume.pdf'
+                link.style.display = 'none'
+                document.body.appendChild(link)
                 link.click()
+                document.body.removeChild(link)
               }}
             >
               <Download size={20} />
