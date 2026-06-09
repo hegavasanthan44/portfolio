@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -11,24 +11,9 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import AnimatedBackground from './components/AnimatedBackground'
-import LoadingScreen from './components/LoadingScreen'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
   const [isDarkMode] = useState(true)
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (isLoading) {
-    return <LoadingScreen />
-  }
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''} min-h-screen bg-primary text-white`}>
